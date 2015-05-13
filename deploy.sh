@@ -36,7 +36,11 @@ do
 	rm $file
 done
 
-git checkout -f master
+# pull from origin
+pushd $SRC_DIR
+	git pull origin master
+	git checkout -f master
+popd
 
 # copy everything over from git
 rsync --recursive --exclude='*.git*' $SRC_DIR/* $DEST_DIR
