@@ -8,7 +8,7 @@ if [ ! -d "$SRC_DIR/.git" ]; then
 	exit
 fi
 
-pushd SRC_DIR
+pushd $SRC_DIR
 	git pull origin master
 	wp2md convert <readme.txt >README.md
 	git add README.md 
