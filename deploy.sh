@@ -50,9 +50,10 @@ done
 cd $DEST_DIR
 
 # Transform the readme
-if [ -f readme.md ]; then
-	mv readme.md readme.txt
-	sed -i '' -e 's/^# \(.*\)$/=== \1 ===/' -e 's/ #* ===$/ ===/' -e 's/^## \(.*\)$/== \1 ==/' -e 's/ #* ==$/ ==/' -e 's/^### \(.*\)$/= \1 =/' -e 's/ #* =$/ =/' readme.txt
+if [ -f README.md ]; then
+	rm README.md
+#	mv readme.md readme.txt
+#	sed -i '' -e 's/^# \(.*\)$/=== \1 ===/' -e 's/ #* ===$/ ===/' -e 's/^## \(.*\)$/== \1 ==/' -e 's/ #* ==$/ ==/' -e 's/^### \(.*\)$/= \1 =/' -e 's/ #* =$/ =/' readme.txt
 fi
 
 # svn addremove
